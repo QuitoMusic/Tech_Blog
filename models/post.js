@@ -17,7 +17,7 @@ const Post = sequelize.define('Post', {
     allowNull: false,
   },
   
-  //TO DO: Continue adding parameters to this model if missing 
+  //TO DO: Continue adding parameters to this model if missing please add
 });
 
 module.exports = Post;
