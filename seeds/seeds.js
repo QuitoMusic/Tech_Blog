@@ -35,18 +35,18 @@ const seedDatabase = async () => {
     await Comment.bulkCreate([
       {
         text: 'This is a comment on the first post.',
-        PostId: posts[0].id, // Associate the comment with the first post
-        UserId: users[1].id, // Associate the comment with the second user
+        PostId: posts[0].id, 
+        UserId: users[1].id, 
       },
       {
         text: 'This is another comment on the first post.',
-        PostId: posts[0].id, // Associate the comment with the first post
-        UserId: users[0].id, // Associate the comment with the first user
+        PostId: posts[0].id, 
+        UserId: users[0].id, 
       },
       {
         text: 'This is a comment on the second post.',
-        PostId: posts[1].id, // Associate the comment with the second post
-        UserId: users[0].id, // Associate the comment with the first user
+        PostId: posts[1].id, 
+        UserId: users[0].id, 
       },
     ]);
 

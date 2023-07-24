@@ -5,14 +5,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const controller = require('./controllers/controller');
 const sequelize = require('./config/connection');
-const hbs = exphbs.create({});
-
+const moment = require('moment');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up sessions with cookies
 const sess = {
-  secret: 'super_secret_secret', 
+  secret: 'super_secret_secret', // Choose a secret for session data
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -22,6 +21,14 @@ const sess = {
 };
 
 app.use(session(sess));
+
+const hbs = exphbs.create({
+  helpers: {
+    formatDate: function (date, format) {
+      return moment(date).format(format);
+    },
+  },
+});
 
 // Set up Handlebars.js as the view engine
 app.engine('handlebars', hbs.engine);
@@ -39,11 +46,27 @@ app.post('/signup', controller.signup);
 app.post('/login', controller.login);
 app.post('/logout', controller.logout);
 
+app.get('/signup', (req, res) => {
+  res.render('signup'); 
+});
+
+app.get('/login', (req, res) => {
+  res.render('login'); 
+});
+
+app.get('/logout', (req, res) => {
+  res.render('logout'); 
+});
+
 // Blog Post Routes
 app.get('/', controller.homepage);
 app.get('/post/:id', controller.showPost);
 app.post('/create', controller.createPost);
 app.post('/delete/:id', controller.deletePost);
+
+app.get('/dashboard', (req, res) => {
+  res.render('dashboard'); 
+});
 
 // Comment Routes
 app.post('/comment/:id', controller.createComment);
