@@ -1,9 +1,9 @@
 const router = require('express').Router();
 
 // Import routes 
-const apiRoutes = require('./api');
-const homeRoutes = require('./home-routes.js');
-const dashboardRoutes = require('./dashboard-routes.js');
+const apiRoutes = require('./apiRoutes');
+const homeRoutes = require('./homeRoutes.js');
+const dashboardRoutes = require('./dashboardRoutes.js');
 
 
 router.use('/api', apiRoutes);
