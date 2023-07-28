@@ -1,0 +1,193 @@
+/* General styles */
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black; 
+}
+
+/* Links */
+a {
+  position: relative;
+  text-decoration: none;
+  color: black; 
+  font-weight: bold;
+  font-size: 20px; 
+  transition: color .1s;
+}
+
+/* Buttons */
+button {
+  background-color: black; 
+  border: 0;
+  padding: 16px; 
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Form elements */
+textarea:focus, input:focus {
+  outline: none;
+  border: 1px solid #040404; 
+}
+
+textarea {
+  min-width: 640px; 
+  min-height: 100px;
+}
+
+
+header {
+  border-bottom: 1px solid #327124; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px; 
+  background-color: #225ca3; 
+  height: 150px;
+}
+
+#titleHeader {
+  font-size: 100px; 
+}
+
+/* Navigation */
+.homeNav {
+  position: relative;
+  right: 192px; 
+  top: 25px;
+}
+
+.dashboardNav {
+  position: relative;
+  right: 192px; 
+  top: 25px;
+}
+
+nav {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  color: black; 
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+
+.loginBtn {
+  position: relative;
+  width: 60px;
+  height: 10px;
+  font-size: 10px; 
+  top: 20px;
+}
+
+
+.btn-no-style {
+  font-size: 20px; 
+  font-weight: bold;
+  margin-left: 16px; 
+}
+
+.delete-post-btn {
+  background-color: #d41414; 
+}
+
+.upvote-btn {
+  background-color: #197d0f; 
+}
+
+
+/* Posts and comments */
+.post, #postTitle, #postText, #commentBody {
+  margin-bottom: 32px; 
+  line-height: 150%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 5px;
+}
+
+#postTitle{
+
+}
+
+.post .title {
+  font-size: 20px; 
+  color: black; 
+}
+
+.post .title span {
+  font-size: 15px; 
+  color: black; 
+}
+
+.edit-link {
+  display: block;
+  margin: -24px 0 32px 0; 
+}
+
+.comment-form {
+  margin-bottom: 80px; 
+}
+
+.comment {
+  padding: 16px; 
+  margin-bottom: 16px; 
+}
+
+.comment:nth-child(odd) {
+  background-color: #f0f5ff ;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: 8px; 
+  opacity: .6;
+}
+
+
+.signupLink {
+  position: relative;
+  left: 80px;
+  top: -10px;
+}
+
+form label {
+  display: block;
+}
+
+
+#login {
+  position: relative;
+  top: 25px;
+  right: 40px;
+}
+
+
+main {
+  flex: 1;
+  padding: 32px 64px; 
+}
+
+/* Layout */
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 20px; 
+}
+
+.aboutMe {
+  flex: 50%;
+  padding: 20px; 
+  position: relative;
+  top: 70px;
+}

@@ -73,7 +73,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         return;
       }
       const post = dbPostData.get({ plain: true });
-      res.render('edit-post', { post, loggedIn: true });
+      res.render('editPost', { post, loggedIn: true });
     })
     .catch(err => {
 
@@ -83,7 +83,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 });
 
 // Route to display a form for editing the user's profile
-router.get('/edituser', withAuth, (req, res) => {
+router.get('/editUser', withAuth, (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
     where: {
@@ -97,7 +97,7 @@ router.get('/edituser', withAuth, (req, res) => {
         return;
       }
       const user = dbUserData.get({ plain: true });
-      res.render('edit-user', { user, loggedIn: true });
+      res.render('editUser', { user, loggedIn: true });
     })
     .catch(err => {
       console.log(err);

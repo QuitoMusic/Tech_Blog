@@ -1,4 +1,3 @@
-// A function to edit a post
 async function editFormHandler(event) {
     event.preventDefault();
 
@@ -9,7 +8,7 @@ async function editFormHandler(event) {
     if(email.length) email = '"email": "' + email + '"';
     let password = document.querySelector('input[name="password"]').value.trim();
     if (!password.length) {
-        alert('You must enter your current password to confirm changes or enter a new password.');
+        alert('Enter your password.');
         return
     } else {
         password = '"password": "' + password + '"';
