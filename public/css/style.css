@@ -118,7 +118,7 @@ nav {
   border-radius: 10px;
   border-width: 1px;
   padding: 5px;
-  width: 1600px;
+  width: 1200px;
 }
 
 .aboutMepost{
@@ -128,7 +128,7 @@ nav {
   border-radius: 10px;
   border-width: 1px;
   padding: 5px;
-  width: 640px;
+  width: 590px;
 }
 
 #postText, #commentBody{
@@ -229,7 +229,7 @@ main {
 
 #editUserLink{
   position: relative;
-  left: 600px;
+  left: 550px;
 }
 
 #usernameSignup, #emailSignup, #passwordSignup{

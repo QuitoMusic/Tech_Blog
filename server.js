@@ -8,7 +8,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const helpers = require('./utils/helpers');
 require('dotenv').config();
 
-// Create an instance of handlebars with custom helpers (Helpers present/Handlebars in process)
+// Create an instance of handlebars with custom helpers 
 const hbs = exphbs.create({ helpers });
 
 // Configure session settings
@@ -26,10 +26,10 @@ const sess = {
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set the static folder to serve static files like CSS and images (Not present yet)
+// Set the static folder to serve static files like CSS and images 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set handlebars as the view engine (Not installed yet)
+// Set handlebars as the view engine 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -44,8 +44,5 @@ app.use(routes);
 
 // Sync the Sequelize models and start server port
 sequelize.sync({ force: false }).then(() => {
-    const port = process.env.PORT || 3000;
-    app.listen(port, () => {
-      console.log(`Server running on port ${port}`);
-    });
+    app.listen(PORT, () => console.log('Now listening on port ' + PORT));
 });
