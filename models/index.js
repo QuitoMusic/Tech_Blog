@@ -41,5 +41,6 @@ Post.hasMany(Comment, {
     hooks: true 
 });
 
-//Export models consolidated in the current file
+//Export models consolidated in the current file//
 module.exports = { User, Post, Comment };
+
