@@ -7,7 +7,7 @@
   </div>
 
   <div>
-    <button type="submit">Add comment</button>
+    <button id="addCommentbtn" type="submit">Add comment</button>
   </div>
 </form>
 {{/if}}
@@ -15,5 +15,6 @@
 {{> comments post.comments}}
 
 {{#if loggedIn}}
+
 <script src="/js/comment.js"></script>
 {{/if}}

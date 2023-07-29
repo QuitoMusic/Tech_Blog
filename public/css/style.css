@@ -19,7 +19,7 @@ a {
 
 /* Buttons */
 button {
-  background-color: black; 
+  background-color: #225ca3; 
   border: 0;
   padding: 16px; 
   color: white;
@@ -30,11 +30,6 @@ button {
 }
 
 /* Form elements */
-textarea:focus, input:focus {
-  outline: none;
-  border: 1px solid #040404; 
-}
-
 textarea {
   min-width: 640px; 
   min-height: 100px;
@@ -53,6 +48,7 @@ header {
 
 #titleHeader {
   font-size: 100px; 
+  color: white;
 }
 
 /* Navigation */
@@ -79,33 +75,63 @@ nav {
 }
 
 
-.loginBtn {
-  position: relative;
-  width: 60px;
-  height: 10px;
-  font-size: 10px; 
-  top: 20px;
+.loginFormbtn {
+  margin-bottom: 10px;
+  width: 200px;
+  background-color: #225ca3; 
 }
 
+#dashboardLink {
+  margin-left: 40px;
+}
 
-.btn-no-style {
+#dashboardLink, #homeLink, .logoutBtn{
+  color: white;
+}
+
+.logoutBtn {
   font-size: 20px; 
   font-weight: bold;
   margin-left: 16px; 
+  background-color: #225ca3; 
 }
 
-.delete-post-btn {
-  background-color: #d41414; 
+.postList{
+  list-style: none;
 }
-
-.upvote-btn {
-  background-color: #197d0f; 
-}
-
 
 /* Posts and comments */
-.post, #postTitle, #postText, #commentBody {
+#postTitle {
   margin-bottom: 32px; 
+  line-height: 150%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 5px;
+  width: 640px;
+}
+
+.post{
+  margin-bottom: 15px; 
+  line-height: 150%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 5px;
+  width: 1600px;
+}
+
+.aboutMepost{
+  margin-bottom: 32px; 
+  line-height: 150%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 5px;
+  width: 640px;
+}
+
+#postText, #commentBody{
   line-height: 150%;
   border-style: solid;
   border-radius: 10px;
@@ -113,36 +139,27 @@ nav {
   padding: 5px;
 }
 
-#postTitle{
+#passwordLogin , #emailLogin{
+margin-bottom: 10px;
+width: 190px;
+line-height: 150%;
+border-style: solid;
+border-radius: 10px;
+border-width: 1px;
+padding: 5px;
+}
 
+.saveDeletebtns{
+  margin-bottom: 32px; 
+  background-color: #225ca3; 
 }
 
 .post .title {
   font-size: 20px; 
-  color: black; 
 }
 
 .post .title span {
   font-size: 15px; 
-  color: black; 
-}
-
-.edit-link {
-  display: block;
-  margin: -24px 0 32px 0; 
-}
-
-.comment-form {
-  margin-bottom: 80px; 
-}
-
-.comment {
-  padding: 16px; 
-  margin-bottom: 16px; 
-}
-
-.comment:nth-child(odd) {
-  background-color: #f0f5ff ;
 }
 
 .comment .meta {
@@ -150,6 +167,18 @@ nav {
   margin-bottom: 8px; 
   opacity: .6;
 }
+
+.comment {
+  padding: 16px; 
+  margin-bottom: 16px; 
+  background-color: #225ca313;
+  border-radius: 20px;
+}
+
+#addCommentbtn{
+  margin-bottom: 30px;
+}
+
 
 
 .signupLink {
@@ -167,6 +196,12 @@ form label {
   position: relative;
   top: 25px;
   right: 40px;
+}
+
+#loginLink {
+  margin-right: 40px;
+  margin-left: 40px;
+ color: white;
 }
 
 
@@ -190,4 +225,24 @@ main {
   padding: 20px; 
   position: relative;
   top: 70px;
+}
+
+#editUserLink{
+  position: relative;
+  left: 600px;
+}
+
+#usernameSignup, #emailSignup, #passwordSignup{
+  line-height: 150%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#loginLinkSU{
+  position: relative;
+  left: 100px;
+  bottom: 32px;
 }
